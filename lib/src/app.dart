@@ -8,7 +8,7 @@ class ContadorPessoasApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
         accentColor: Colors.amberAccent,
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.purple,
       ),
       home: HomeView(),
     );
