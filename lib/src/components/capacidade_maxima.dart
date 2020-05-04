@@ -18,16 +18,23 @@ class _CapacidadeMaximaState extends State<CapacidadeMaxima> {
   Widget build(BuildContext context) {
     return Container(
         child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         SizedBox(
-          height: 370,
+          height: 220,
         ),
-        Text(
-          'Capacidade: $capacity',
-          style: TextStyle(
-            fontSize: 30,
-            color: Colors.deepPurple,
-            fontWeight: FontWeight.bold,
+        Padding(
+          padding: const EdgeInsets.all(5),
+          child: FittedBox(
+            child: Text(
+              'Capacidade: $capacity',
+              style: TextStyle(
+                fontFamily: 'IndieFlower',
+                fontSize: 30,
+                color: Colors.deepPurple,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ),
         Padding(
@@ -36,15 +43,15 @@ class _CapacidadeMaximaState extends State<CapacidadeMaxima> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(5),
                 child: RaisedButton(
                   elevation: 15,
                   color: Colors.purple[100],
                   onPressed: () {
-                    changeCapacity(5);
+                    changeCapacity(-5);
                   },
                   child: Text(
-                    '+5',
+                    '-5',
                     style: TextStyle(
                       fontSize: 30,
                       color: Colors.deepPurple,
@@ -59,10 +66,10 @@ class _CapacidadeMaximaState extends State<CapacidadeMaxima> {
                 elevation: 15,
                 color: Colors.purple[100],
                 onPressed: () {
-                  changeCapacity(-5);
+                  changeCapacity(5);
                 },
                 child: Text(
-                  '-5',
+                  '+5',
                   style: TextStyle(
                     fontSize: 30,
                     color: Colors.deepPurple,

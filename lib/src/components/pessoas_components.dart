@@ -31,39 +31,27 @@ class _PessoasState extends State<Pessoas> {
         child: Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
-        Text(
-          'Pessoas: $_people',
-          style: TextStyle(
-            fontSize: 30,
-            color: Colors.deepPurple,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
         SizedBox(
-          height: 5,
+          width: 50,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(2),
+          child: FittedBox(
+            child: Text(
+              'Pessoas: $_people',
+              style: TextStyle(
+                fontSize: 30,
+                color: Colors.deepPurple,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.all(10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              RaisedButton(
-                elevation: 15,
-                color: Colors.purple[100],
-                onPressed: () {
-                  _changePeople(1);
-                },
-                child: Text(
-                  '+1',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.deepPurple,
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 50,
-              ),
               RaisedButton(
                 elevation: 15,
                 color: Colors.purple[100],
@@ -77,19 +65,41 @@ class _PessoasState extends State<Pessoas> {
                     color: Colors.deepPurple,
                   ),
                 ),
+              ),
+              SizedBox(
+                width: 50,
+              ),
+              RaisedButton(
+                elevation: 15,
+                color: Colors.purple[100],
+                onPressed: () {
+                  _changePeople(1);
+                },
+                child: Text(
+                  '+1',
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.deepPurple,
+                  ),
+                ),
               )
             ],
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 5,
         ),
-        Text(
-          _infoText,
-          style: TextStyle(
-            fontSize: 30,
-            color: Colors.deepPurple[300],
-            fontWeight: FontWeight.bold,
+        Padding(
+          padding: const EdgeInsets.all(2),
+          child: FittedBox(
+            child: Text(
+              _infoText,
+              style: TextStyle(
+                fontSize: 30,
+                color: Colors.deepPurple[300],
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ),
         SizedBox(

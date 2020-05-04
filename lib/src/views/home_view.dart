@@ -19,9 +19,20 @@ class _HomeViewState extends State<HomeView> {
       ),
       body: Stack(
         children: <Widget>[
-          Image.asset('assets/images/papel_de_parede.jpeg'),
-          CapacidadeMaxima(),
-          Pessoas(),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.45,
+            child: Image.asset(
+              'assets/images/papel_de_parede.jpeg',
+            ),
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.85,
+            child: CapacidadeMaxima(),
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.95,
+            child: Pessoas(),
+          ),
         ],
       ),
     );

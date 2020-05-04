@@ -7,8 +7,17 @@ class ContadorPessoasApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: ThemeData(
+        fontFamily: 'IndieFlower',
         accentColor: Colors.amberAccent,
         primarySwatch: Colors.purple,
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+                title: TextStyle(
+                  fontFamily: 'FjallaOne',
+                  fontSize: 20,
+                ),
+              ),
+        ),
       ),
       home: HomeView(),
     );
